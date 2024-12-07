@@ -1,4 +1,7 @@
 <?php
+
+## php -S 127.0.0.1:8000
+
 $name = "Sohayla Ihab Hamed";
 $phoneno = "1023210809";
 $phoneno_float = 0.1023210809;  ## two variants of phone number
