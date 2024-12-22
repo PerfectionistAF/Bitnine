@@ -1,0 +1,9 @@
+Steps:
+1) New angular app
+2) Add required node packages
+3) Required functionality:
+----List the list of weather cities
+----Search for a specific city
+----Display weather for that city with units conversion and date
+
+
