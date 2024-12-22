@@ -32,14 +32,14 @@ function findCity(req, res) {
 }
 
 /*SEARCH FUNCTION ADDED FOR SEARCHING BY NAME THEN RECEIVING IT IN THE FRONTEND*/
-app.get('/cityForecast/:cityName', (req, res) => {
+app.get('/cityForecast/search/:cityName', (req, res) => {
   const foundCity = findCityByName(req, res);
   res.send(foundCity);
 });
 
 function findCityByName(req, res) {
-  const cityId = req.params.cityName;
-  const foundCity = citiesWeather.find(it => it.name === cityName);
+  const cityName = req.params.cityName.replace(/\s+/g, '').toLowerCase();  ///make sure no spaces
+  const foundCity = citiesWeather.find(it => it.city.replace(/\s+/g, '').toLowerCase() === cityName);
   if (!foundCity) {
     throw res.status(404).send({errorMessage: `City does not exist`});
   }
