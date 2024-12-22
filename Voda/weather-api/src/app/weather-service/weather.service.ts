@@ -21,7 +21,7 @@ export interface City {
 
 ///add the routes here before designing the frontend
 export class WeatherService {
-  private base_url = './src';
+  private base_url = 'http://localhost:4200';//'./src'; 
 
   constructor(private http:HttpClient) { }
 

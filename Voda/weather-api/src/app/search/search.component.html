@@ -1,1 +1,11 @@
-<p>search works!</p>
+<div>
+    <mat-form-field>
+        <!--matInput (input)="onSearchChange($event.target.value)"-->
+      <input placeholder="Search city" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event.value)" placeholder="Select date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>

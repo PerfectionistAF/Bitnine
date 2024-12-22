@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="upper-data">
+    <img src="/assets/images/sunny.png" *ngIf="15 > 14">
+    <img src="/assets/images/chilly.png" *ngIf="15 < 14">
+    <img src="/assets/images/cold.png" *ngIf="15 <= 10"> 
+
+    <div class="weather-data">
+      <div class="date">
+        2023 - 11 - 23
+      </div>
+      <div class="location">
+        New York
+      </div>
+      <div class="temperature">
+        {{15.50 | number: '1.0-0'}} ° 
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <div class="lower-data">
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="/assets/images/celsius.png">
+          <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{15.50 | number: '1.0-0'}}</span>
+          <span class="caption">Temperature</span>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="/assets/images/fahrenheit.png">
+          <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{59.50 | number: '1.0-0'}}</span>
+          <span class="caption">Temperature</span>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="/assets/images/humidity.png">
+          <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{60}}%</span>
+          <span class="caption">Humidity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<router-outlet />

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 4454; //4200 ///keep both ports the same
+const PORT = 4454;
 const citiesWeather = require('./weather_cities.json');
 
 app.use(function(req, res, next) {
@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/forecast', (req, res) => {
-  res.send(citiesWeather); //send as is
+  res.send(citiesWeather);
 });
 
 app.get('/cityForecast/:cityId', (req, res) => {
@@ -22,7 +22,7 @@ app.get('/cityForecast/:cityId', (req, res) => {
 });
 
 
-function findCity(req, res) {  //find city by interface id
+function findCity(req, res) {
   const cityId = parseInt(req.params.cityId);
   const foundCity = citiesWeather.find(it => it.id === cityId);
   if (!foundCity) {

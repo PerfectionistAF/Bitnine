@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { City } from '../weather-service/weather.service';
 
 @Component({
   selector: 'app-weather-card',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
   templateUrl: './weather-card.component.html',
   styleUrl: './weather-card.component.css'
 })
-export class WeatherCardComponent {
 
+export class WeatherCardComponent {
+  @Input() city!: City;
+  @Input() unit: 'Celsius' | 'Fahrenheit' = 'Celsius';
 }

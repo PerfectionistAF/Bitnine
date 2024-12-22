@@ -1,1 +1,15 @@
-<p>weather-card works!</p>
+<mat-card *ngFor="let forecast of city.forecast">
+    <mat-card-title>{{ city.city }}</mat-card-title>
+    <mat-card-content>
+      <p>Date: {{ forecast.date }}</p>
+      <p>
+        Temperature: {{
+          unit === 'Celsius'
+            ? forecast.temperatureCelsius
+            : forecast.temperatureFahrenheit
+        }}
+        °{{ unit }}
+      </p>
+      <p>Humidity: {{ forecast.humidity }}%</p>
+    </mat-card-content>
+  </mat-card>
