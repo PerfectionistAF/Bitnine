@@ -99,10 +99,16 @@ body{
     display: flex;
     justify-content: center;
     gap: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
   
   .info-block {
+    display: flex;
     flex: 1;
+    flex-direction: row;
     margin: 5px;
     background-color: var(--shadow-light);
     border-radius: 10px;
@@ -115,6 +121,7 @@ body{
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   
@@ -122,4 +129,8 @@ body{
     width: 80px;
     height: auto;
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
