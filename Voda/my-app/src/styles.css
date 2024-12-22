@@ -25,16 +25,25 @@ body{
     background-image: url('../public/assets/images/global_theme.png');
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
+.parent-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+}
+
 .container{
+    flex: 1;
+    margin: 10px;
     width: 400px;
     height: 80vh;
     /*background-color: var(--blue-2);*/
+    /*margin-left: 0;*/
     border-radius: 20px;
-    box-shadow: 10px 10px 10px var(--shadow-dark);
+    box-shadow: 0px 4px 8px var(--shadow-dark);
 }
 
 .upper-data{

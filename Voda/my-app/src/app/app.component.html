@@ -1,50 +1,55 @@
-<div class="container">
-  <div class="upper-data">
-    <img src="/assets/images/sunny.png" *ngIf=" temperatureCelsius >= 22">
-    <img src="/assets/images/chilly.png" *ngIf=" temperatureCelsius < 22 && temperatureCelsius > 10">
-    <img src="/assets/images/cold.png" *ngIf=" temperatureCelsius <= 10"> 
+<div class="parent-container">
 
-    <div class="weather-data">
-      <div class="date">
-        {{date}}
+  <div class="container" *ngFor="let forcast of forecasts">
+    <div class="upper-data">
+      <img src="/assets/images/sunny.png" *ngIf=" forcast.temperatureCelsius >= 22">
+      <img src="/assets/images/chilly.png" *ngIf=" forcast.temperatureCelsius < 22 && forcast.temperatureCelsius > 10">
+      <img src="/assets/images/cold.png" *ngIf=" forcast.temperatureCelsius <= 10"> 
+
+      <div class="weather-data">
+        <div class="date">
+          {{forcast.date}}
+        </div>
+        <div class="location">
+          {{city}}
+        </div>
+        <div class="temperature">
+          {{forcast.temperatureCelsius | number: '1.0-0'}} ° 
+        </div>
       </div>
-      <div class="location">
-        {{city}}
-      </div>
-      <div class="temperature">
-        {{temperatureCelsius | number: '1.0-0'}} ° 
-      </div>
-    </div>
     
-  </div>
+    </div>
 
   
-  <div class="lower-data">
-    <div class="more-info-container">
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="/assets/images/celsius.png">
-          <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{temperatureCelsius | number: '1.0-0'}}</span>
-          <span class="caption">Temperature</span>
+    <div class="lower-data">
+      <div class="more-info-container">
+        <div class="info-block">
+          <div class="info-block-label">
+            <img src="/assets/images/celsius.png">
+            <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{forcast.temperatureCelsius | number: '1.0-0'}}</span>
+            <span class="caption">Temperature</span>
+          </div>
         </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="/assets/images/fahrenheit.png">
-          <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{temperatureFahrenheit | number: '1.0-0'}}</span>
-          <span class="caption">Temperature</span>
+        <div class="info-block">
+          <div class="info-block-label">
+            <img src="/assets/images/fahrenheit.png">
+            <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{forcast.temperatureFahrenheit | number: '1.0-0'}}</span>
+            <span class="caption">Temperature</span>
+          </div>
         </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="/assets/images/humidity.png">
-          <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{humidity}}%</span>
-          <span class="caption">Humidity</span>
+        <div class="info-block">
+          <div class="info-block-label">
+            <img src="/assets/images/humidity.png">
+            <span class="location" style="color: rgba(0, 0, 0, 0.8);">{{forcast.humidity}}%</span>
+            <span class="caption">Humidity</span>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
 </div>
+
 
 <router-outlet />
