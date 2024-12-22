@@ -1,3 +1,27 @@
+<div class="search-container">
+  <!--<div class="menu-bar">-->
+    <select>
+      <option value="" disabled selected>Select a city</option>
+      <option value="New York">New York</option>
+      <option value="Los Angeles">Los Angeles</option>
+      <option value="Chicago">Chicago</option>
+      <option value="Houston">Houston</option>
+      <option value="Miami">Miami</option>
+      <option value="Toronto">Toronto</option>
+      <option value="London">London</option>
+      <option value="Paris">Paris</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="Sydney">Sydney</option>
+      <option value="Beijing">Beijing</option>
+    </select>
+  <!--</div>-->
+
+  <input type="text" placeholder="Enter city name" #filter>
+  <button (click)="searchByCityName(filter.value)">Search</button>
+  <input type="date" placeholder="Filter by date">
+  <button>Filter</button>
+</div>
+
 <div class="parent-container">
 
   <div class="container" *ngFor="let forcast of forecasts">

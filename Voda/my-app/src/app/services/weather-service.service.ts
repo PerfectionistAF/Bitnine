@@ -14,4 +14,5 @@ export class WeatherServiceService {
     const forecast = this.http.get<any>(`${this.base_url}/cityForecast/${cityId}`);
     return forecast;
   }
+
 }

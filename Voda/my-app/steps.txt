@@ -1,14 +1,3 @@
-Steps:
-1) New angular app
-2) Add required node packages
-3) Required functionality:
-----List the list of weather cities
-----Search for a specific city
-----Display weather for that city with units conversion and date
-4) Submission preferences:
-----Small components (used emmet.io, as few screens as possible)
-
-
 -------------PLAN-------------
 
 Create standalone routing app---------------------------------------------DONE
@@ -25,12 +14,12 @@ City.forecast[0].temperatureFahrenheit, City.forecast[0].humidity---------DONE
 
 Test different cities, dynamicly------------------------------------------DONE
  
-List all cities-----------------------------------------------------------
+List all cities-----------------------------------------------------------DONE
 
-Create a search bar to type in the name of the city-----------------------
+Create a search bar to type in the name of the city-----------------------DONE
 
-Create cards for all the days given---------------------------------------
+Create cards for all the days given---------------------------------------DONE
 
-Create a date search bar--------------------------------------------------
+Create a date search bar--------------------------------------------------DONE
 
 
