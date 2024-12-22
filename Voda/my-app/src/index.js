@@ -31,6 +31,23 @@ function findCity(req, res) {
   return foundCity;
 }
 
+/*SEARCH FUNCTION ADDED FOR SEARCHING BY NAME THEN RECEIVING IT IN THE FRONTEND*/
+app.get('/cityForecast/:cityName', (req, res) => {
+  const foundCity = findCityByName(req, res);
+  res.send(foundCity);
+});
+
+function findCityByName(req, res) {
+  const cityId = req.params.cityName;
+  const foundCity = citiesWeather.find(it => it.name === cityName);
+  if (!foundCity) {
+    throw res.status(404).send({errorMessage: `City does not exist`});
+  }
+  return foundCity;
+}
+
+
+
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });

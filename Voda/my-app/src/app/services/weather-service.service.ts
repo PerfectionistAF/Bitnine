@@ -15,4 +15,9 @@ export class WeatherServiceService {
     return forecast;
   }
 
+  searchCityForecast(cityName: string): Observable<any> {
+    const forecast = this.http.get<any>(`${this.base_url}/cityForecast/${cityName}`);
+    return forecast;
+  }
+
 }
